@@ -1,0 +1,30 @@
+@extends('admin.admin_master');
+@section('header-content')
+@include('admin.common.header')
+@endsection
+@section('left-sidebar')
+@include('admin.common.left_sidebar')
+@endsection
+@section('nav-bar')
+@include('admin.common.navbar')
+@endsection
+@section('dashboard-heading')
+@include('admin.common.dashboard_heading')
+@endsection
+@section('banner')
+@include('admin.common.banner')
+@endsection
+@section('listing-content')
+@include('admin.common.listing_page')
+@endsection
+@section('chart')
+@include('admin.common.chart')
+@endsection
+{{-- service form modal start--}}
+@section('service-content')
+@include('admin.services.add_service')
+{{-- service form modal end--}}
+@endsection
+@section('footer-content')
+@include('admin.common.footer')
+@endsection

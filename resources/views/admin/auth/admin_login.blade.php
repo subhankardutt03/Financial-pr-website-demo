@@ -60,7 +60,7 @@
                                         </a>
                                     </div>
                                     <div class="position-relative">
-                                        <input type="text" class="form-control" name="password">
+                                        <input type="password" class="form-control" name="password">
                                         <div class="form-control-icon">
                                             <i data-feather="lock"></i>
                                         </div>
@@ -80,19 +80,6 @@
                                     <button type="submit" class="btn btn-primary float-end">Submit</button>
                                 </div>
                             </form>
-                            <div class="divider">
-                                <div class="divider-text">OR</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <button class="btn btn-block mb-2 btn-primary"><i data-feather="facebook"></i>
-                                        Facebook</button>
-                                </div>
-                                <div class="col-sm-6">
-                                    <button class="btn btn-block mb-2 btn-secondary"><i data-feather="github"></i>
-                                        Github</button>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

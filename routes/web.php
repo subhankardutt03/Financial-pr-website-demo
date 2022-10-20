@@ -26,7 +26,7 @@ Route::prefix('admin')->group(function () {
 ////////////////////// Admin Route End ///////////////////////
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login_form');
 });
 
 Route::get('/dashboard', function () {

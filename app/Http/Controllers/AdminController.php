@@ -10,7 +10,7 @@ class AdminController extends Controller
 {
     public function Dashboard()
     {
-        return view('admin.admin_master');
+        return view('admin.index');
     }
 
     public function Index()
@@ -23,6 +23,10 @@ class AdminController extends Controller
         $check = $request->all();
         // dd($check);
         if (Auth::guard('admin')->attempt(['email' => $check['email'], 'password' => $check['password']])) {
+            $admin = Auth::guard('admin')->user();
+            Admin::where('email', $admin->email)->update([
+                'status' => 1
+            ]);
             return redirect()->route('admin.dashboard')->with('success', 'You have logged in successfully ');
         } else {
             return back()->with('error', 'your credentials is not matched');
@@ -31,7 +35,11 @@ class AdminController extends Controller
 
     public function Logout()
     {
+        $admin = Auth::guard('admin')->user();
         Auth::guard('admin')->logout();
+        Admin::where('email', $admin->email)->update([
+            'status' => 0
+        ]);
         return redirect()->route('login_form')->with('success', 'You logged out successfully');
     }
 }
